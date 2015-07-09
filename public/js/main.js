@@ -137,7 +137,7 @@
 
       $('#current-word-value').text('');
     } else {
-      alert('INVALID WORD', currentWord);
+      alert('Invalid Word: ' + currentWord);
     }
   }
 
@@ -162,8 +162,15 @@
     document.location.reload();
   }
 
+  // Question mark animation thingy
   function questionHandler () {
-    // do stuff
+    $('#btn-question').addClass('hide');
+    $('#btn-mario-qmark').removeClass('hide');
+
+    setTimeout(function onTimeout () {
+      $('#btn-question').removeClass('hide');
+      $('#btn-mario-qmark').addClass('hide');
+    }, 3000);
   }
 
 

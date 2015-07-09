@@ -1,5 +1,4 @@
 @light-orange: #FFCA08;
-@dark-orange: #F57921;
 @light-blue: #daf1ff;
 @dark-blue: #398BD4;
 
@@ -9,6 +8,44 @@ body {
   h1 {
     font-weight: 400;
     letter-spacing: 2px;
+  }
+
+  ul#navigation {
+    position: relative;
+    float: right;
+
+    li {
+      float: left;
+      list-style: none;
+      padding: 10px;
+      position: relative;
+      top: 21px;
+      left: 49px;
+
+      span {
+        border: 2px solid #000;
+        padding: 2px 7px;
+        font-size: 16px;
+      }
+    }
+
+    #btn-mario-qmark:hover {
+      background-color: none;
+    }
+
+    #btn-mario-qmark {
+      position: relative;
+      margin-left: -30px;
+      margin-right: 13px;
+      margin-top: -29px;
+      height: 50px;
+    }
+
+    .btn-nav:hover {
+      cursor: pointer;
+      background-color: #000;
+      color: #fff;
+    }
   }
 
   #boggle-board {
@@ -34,7 +71,7 @@ body {
     border: 3px solid #fff;
     float: left;
     margin: 5px;
-    box-shadow: 1px 2px 0.20em black;
+    box-shadow: 1px 2px 0.20em #000;
 
     .dice {
       position: relative;
@@ -54,18 +91,17 @@ body {
 
   #cw-container {
     margin-top: 22px;
-
-    #current-word-value {
-      font-weight: 400;
-    }
+    font-weight: bold;
 
     #current-word span {
-      font-weight: bold;
+      font-size: 18px;
     }
 
     button {
       margin: 20px 0;
       width: 192px;
+      font-weight: 200;
+      letter-spacing: 1px;
     }
   }
 
@@ -110,54 +146,32 @@ body {
       }
     }
   }
-}
 
-.center {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-#container {
-
-}
-.center-row {
-  -webkit-flex-direction: row;
-  flex-direction: row;
-}
-
-#logo-container {
-  text-align: center;
-}
-
-.btn-nav:hover {
-  cursor: pointer;
-  background-color: #000;
-  color: #fff;
-}
-
-ul#navigation {
-  position: relative;
-  right: 20px;
-  float: right;
-
-  li {
-    float: left;
-    list-style: none;
-    padding: 10px;
-    position: relative;
-    top: 21px;
-    left: 49px;
-
-    span {
-      border: 2px solid black;
-      padding: 2px 7px;
-      font-size: 16px;
+  @media (max-width: 830px) {
+    ul#navigation {
+      li {
+        left: 0px;
+      }
     }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .center {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  .center-row {
+    -webkit-flex-direction: row;
+    flex-direction: row;
   }
 }
