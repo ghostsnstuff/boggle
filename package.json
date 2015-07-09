@@ -1,0 +1,14 @@
+{
+  "name": "boggle",
+  "version": "0.0.0",
+  "description": "Boggle",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "4.11.1",
+    "harp": "0.14.0"
+  }
+}

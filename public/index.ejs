@@ -1,0 +1,117 @@
+<!doctype html>
+
+<title>Boggle</title>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+<main class="container">
+
+  <!-- Header -->
+  <div class="row">
+    <div>
+      <nav>
+        <ul id="navigation">
+          <li><span class="btn-nav" id="btn-new-game">New Game</span></li>
+          <li><span class="btn-nav" id="btn-question">?</span></li>
+          <li>
+            <div class="dropright">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown
+              </button>
+              <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="center row">
+    <div >
+      <h1>&ltBoggle/&gt</h1>
+    </div>
+  </div>
+
+  <!-- Game Board -->
+  <div class="center row" >
+
+    <div id="boggle-board" >
+      <!-- Dice Template -->
+      <script type='text/template' id='dice'>
+        {{#each .}}
+        <section class="dice-container">
+          <div data-id="{{vertex}}" class="dice center">
+            <span>{{toUpperCase value}}</span>
+          </div>
+        </section>
+        {{/each}}
+      </script>
+    </div>
+    <section id="cw-container">
+      <div id="current-word">
+        <span>Current Word:</span>
+        <span id="current-word-value"></span>
+      </div>
+      <button type="submit" class="pure-button">Submit Word</button>
+    </section>
+    <!-- Score Board Template -->
+    <script type="text/template" id="word-points">
+      <div id="scoreboard-container">
+        <table>
+          <tr>
+            <td class="title col-1">Word</td>
+            <td class="title">Score</td>
+          </tr>
+          {{#each .}}
+          <tr>
+            <td class="col-1">{{word}}</td>
+            <td>{{points}}</td>
+          </tr>
+          {{/each}}
+          <tr>
+            <td class="bottom-td col-1">Total:</td>
+            <td id="total-points" class="bottom-td"></td>
+          </tr>
+        </table>
+      </div>
+    </script>
+    <section id="score-board">
+    </section>
+
+</main>
+
+<!-- <main id="container">
+
+  <div class="row">
+    <div class="col-xs-12" >
+      <div id="logo-container">
+        <h1>&ltBoggle/&gt</h1>
+      </div>
+    </div>
+    <div class="col-md-4" style="border: 1px solid red;">
+      <nav>
+        <ul id="navigation">
+          <li><span>New Game</span></li>
+          <li><span>?</span></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div>
+    <div class="center">
+
+  </div>
+  </div>
+</main> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
